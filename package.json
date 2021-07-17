@@ -1,0 +1,10 @@
+{
+  "name": "use-shared-state",
+  "version": "1.0.0",
+  "description": "Shared State hook",
+  "main": "dist/useSharedState.js",
+  "repository": "https://github.com/thetinydots/use-shared-state.git",
+  "author": "Virat Patel <21.virat@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
