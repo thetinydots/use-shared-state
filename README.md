@@ -32,7 +32,7 @@ const value = useSharedStateValue<string>(
 ); //second arg is optional
 ```
 
-3. useSharedStateValue ( Hook 🪝 )
+3. useSharedStateChange ( Hook 🪝 )
 
 ```typescript
 const setValue =

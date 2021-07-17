@@ -1,6 +1,6 @@
 {
   "name": "@tinyd/usesharedstate",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Shared State hook",
   "main": "./dist/useSharedState.js",
   "types": "./dist/main.d.ts",
