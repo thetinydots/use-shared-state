@@ -11,6 +11,7 @@ Shared States across multiple components.
 ### Available functions ⚙️
 
 1. getOrSetSharedValue
+1. setSharedValue
 
 ## Usage
 
@@ -46,4 +47,13 @@ const value = getOrSetSharedValue<string>(
   "key",
   "initialValue"
 ); //second arg is optional
+```
+
+5. setSharedValue ( Function ⚙️ )
+
+```typescript
+const value = setSharedValue<string>(
+  "key",
+  "value"
+);
 ```

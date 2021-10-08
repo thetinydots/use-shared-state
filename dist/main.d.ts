@@ -1,4 +1,17 @@
 /**
+ * non-hook function
+ * @param key string
+ * @param initialValue (optional) initial value
+ * @return shared state value
+ */
+declare const getOrSetSharedValue: <T = any>(key: string, value?: T | undefined) => T;
+/**
+ * @param key string
+ * @param value value
+ * @return void
+ */
+declare function setSharedValue<T = any>(key: string, value: T): void;
+/**
  * @param key string
  * @return change state function
  */
@@ -17,4 +30,4 @@ declare function useSharedStateValue<T = any>(key: string, initialValue?: T): T;
 declare function useSharedState<T = any>(key: string, initialValue?: T): [T, (newValue: T) => any];
 
 export default useSharedState;
-export { useSharedStateChange, useSharedStateValue };
+export { getOrSetSharedValue, setSharedValue, useSharedStateChange, useSharedStateValue };

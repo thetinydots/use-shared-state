@@ -42,6 +42,15 @@ var getOrSetSharedValue = function (key, value) {
 };
 /**
  * @param key string
+ * @param value value
+ * @return void
+ */
+function setSharedValue(key, value) {
+    valuesStore[key] = value;
+    PubSub__namespace.publish(key, value);
+}
+/**
+ * @param key string
  * @return change state function
  */
 function useSharedStateChange(key) {
@@ -86,6 +95,8 @@ function useSharedState(key, initialValue) {
 }
 
 exports.default = useSharedState;
+exports.getOrSetSharedValue = getOrSetSharedValue;
+exports.setSharedValue = setSharedValue;
 exports.useSharedStateChange = useSharedStateChange;
 exports.useSharedStateValue = useSharedStateValue;
 //# sourceMappingURL=useSharedState.js.map

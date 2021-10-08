@@ -12,7 +12,7 @@ const valuesStore: { [key: string]: any } = {};
  * @param initialValue (optional) initial value
  * @return shared state value
  */
-const getOrSetSharedValue = <T = any>(
+export const getOrSetSharedValue = <T = any>(
   key: string,
   value?: T
 ) => {
@@ -23,6 +23,19 @@ const getOrSetSharedValue = <T = any>(
     valuesStore[key] = value;
   return value as T;
 };
+
+/**
+ * @param key string
+ * @param value value
+ * @return void
+ */
+export function setSharedValue<T = any>(
+  key: string,
+  value: T
+) {
+  valuesStore[key] = value;
+  PubSub.publish(key, value);
+}
 
 /**
  * @param key string
